@@ -34,6 +34,9 @@ RUN npm install
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt
 
+# copy the content of the local src directory to the working directory
+COPY . .
+
 # setup workdir
 
 RUN dpkg --add-architecture i386
